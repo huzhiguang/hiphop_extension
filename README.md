@@ -3,9 +3,18 @@
 <h2>1.  The directory structure</h2>
 
 
-Idl file：src/idl/ice.idl.php<br>
-Implement files：src/runtime/ext/ext_ice.h<br>
+<b>Idl file：</b>src/idl/ice.idl.php<br>
+<b>Implement files：</b>src/runtime/ext/ext_ice.h<br>
 		 src/runtime/ext/ext_ice.cpp<br>
+<b>php interface file：</b>php/ice/Ice.php<br>
+		    HHVM we custom the ice in the interface file, 
+		    so the application HHVM call ice,
+		    Can't quote the PHP file Ice.php，Need we defined this Ice.php file reference<br>
+		    For Example:<br>
+		    require “/export/hhvm/php/Ice.php<br>
+
+<b>Test case:</b>test<br>
+
 <h2>2.	Support functions：</h2>
 Types of support:<br>
 The basic types supported:<br>
@@ -126,4 +135,8 @@ cp ext_ice.h $HPHP_HOME/src/runtime/ext<br>
 cp ext_ice.cpp $HPHP_HOME/src/runtime/ext<br>
 
 Other ways in accordance with the HHVM compiler extensions can be added<br>
+
+<h3>5.	Test case</h3>
+wait for join<br>
+
 
