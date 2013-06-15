@@ -65,5 +65,5 @@ $IcePHP__t_string=create_typeinfobyid(0);
 $IcePHP__t_long=create_typeinfobyid(1);
 $IcePHP__t_int=create_typeinfobyid(2);
 $Ice__t_Object=create_typeinfobyid(3);
-$IcePHP__t_double=create_typeinfobyid(4);
+
 ?>
