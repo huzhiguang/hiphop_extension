@@ -67,6 +67,7 @@ Cd Ice-3.4.1/cpp<br>
 vi config/Make.rules<br>
 
 Modify the prefix ice installation path and support package for reference path:<br>
+=====================================================================================<br>
 14： prefix          ?= /export/huzhiguang/files/Ice-$(VERSION)<br>
 20：embedded_runpath_prefix ?= /export/huzhiguang/files/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)<br>
 66：BZIP2_HOME      ?= /export/huzhiguang/files/bzip2-1.0.5<br>
@@ -74,7 +75,7 @@ Modify the prefix ice installation path and support package for reference path:<
 80：EXPAT_HOME      ?= /export/huzhiguang/files/expat-2.0.1<br>
 87：OPENSSL_HOME        ?= /export/huzhiguang/files/openssl-0.9.8n<br>
 93：MCPP_HOME       ?= /export/huzhiguang/files/mcpp-2.7.2<br>
-
+=====================================================================================<br>
 Modification has been completed, and then save<br>
 Make –j 16<br>
 Make install<br>
@@ -82,14 +83,15 @@ Make install<br>
 Configure the environment variables：<br>
 vi ~/.bashrc<br>
 Add the following content：<br>
-
+=====================================================================================<br>
 export ICE_HOME=/export/huzhiguang/files/Ice-3.4.1<br>
 export PATH=$ICE_HOME:$PATH<br>
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ICE_HOME/lib64<br>
-
+=====================================================================================<br>
 excute :source ~/.bashrc<br>
 
 Then enter the ICE_HOME/bin, check the LDD the executable file <br>
+=====================================================================================<br>
 [huzg@localhost bin]$ ldd slice2cpp<br>
         linux-vdso.so.1 =>  (0x00007ffff5554000)<br>
         libSlice.so.34 => /export/huzhiguang/files/Ice-3.4.1/lib64/libSlice.so.34 (0x00007fe0065fd000)<br>
@@ -102,11 +104,13 @@ Then enter the ICE_HOME/bin, check the LDD the executable file <br>
         libgcc_s.so.1 => /export/servers/gcc-4.6.1/lib64/libgcc_s.so.1 (0x00007fe0054c7000)<br>
         libc.so.6 => /lib64/libc.so.6 (0x00007fe005134000)<br>
         /lib64/ld-linux-x86-64.so.2 (0x00007fe006a48000)<br>
+=====================================================================================<br>
 Dynamic link library content is normal<br>
 
-$ICE_HOME/lib64  so packages copy to $ CMAKE_PREFIX_PATH/lib/Ice directory<br>
-$ICE_HOME/include directory copy to $ CMAKE_PREFIX_PATH/include/Ice directory<br>
-
+$ICE_HOME/lib64  so packages copy to $CMAKE_PREFIX_PATH/lib/Ice directory<br>
+$ICE_HOME/include directory copy to $CMAKE_PREFIX_PATH/include/Ice directory<br>
+cp -r $ICE_HOME/lib64   $CMAKE_PREFIX_PATH/lib/Ice <br>
+cp -r $ICE_HOME/include $CMAKE_PREFIX_PATH/include/Ice<br>
 <h3>4.	Hiphop Ice install way：</h3>
 edit $HPHP_HOME/CMake/HPHPFind.cmake<br>
 add content:<br>
