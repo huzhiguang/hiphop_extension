@@ -17,7 +17,13 @@
 <p><span>git check mssql</span></p>
 <p><span>git pull</span></p>
 <p><span>&nbsp;</span></p>
-<h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.3.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Redis:</span></h2><h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.4.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Mongdodb:</span></h2><h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.5.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Xcache:</span></h2><p><span>&nbsp;</span></p>
+<h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.3.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Redis:</span></h2><h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.4.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Mongdodb:</span></h2><p><span style="font-size:10.0pt;font-family:&quot">See the mssql </span><span style="font-size:10.0pt;font-family:&quot">branch</span><span style="font-family:宋体">：</span></p>
+<p><span><a href="https://github.com/huzhiguang/hiphop_extension/tree/mongodb">https://github.com/huzhiguang/hiphop_extension/tree/mongodb</a></span></p>
+<p><span>update branch:</span></p>
+<p><span>git clone <a href="https://github.com/huzhiguang/hiphop_extension.git">https://github.com/huzhiguang/hiphop_extension.git</a></span></p>
+<p><span>git check mongodb</span></p>
+<p><span>git pull</span></p>
+<h2 style="margin-left:1.0cm;text-indent:-1.0cm"><span>3.5.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp; </span></span><span>Xcache:</span></h2><p><span>&nbsp;</span></p>
 <h1 style="margin-left:21.25pt;text-indent:-21.25pt"><span>4.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp;&nbsp;</span></span><span>Develop members</span></h1><p><span>Total:huzhiguang,wanghong,liulei</span></p>
 <p><span>Ice:huzhiguang,wanghong</span></p>
 <p><span>Mssql :wanghong</span></p>
