@@ -33,7 +33,7 @@
 <p><span>cp –r $FREETDS_HOME/lib $CMAKE_PREFIX_PATH/lib/freetds</span></p>
 <p><span>cp –r $FREETDS_HOME/include $CMAKE_PREFIX_PATH/include/freetds</span></p>
 <p><span>&nbsp;</span></p>
-<h1 style="margin-left:21.25pt;text-indent:-21.25pt"><span>4.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp;&nbsp;</span></span><span>Hiphop Ice install way</span><span style="font-family:宋体">：</span></h1><p><span>edit $HPHP_HOME/CMake/HPHPFind.cmake</span></p>
+<h1 style="margin-left:21.25pt;text-indent:-21.25pt"><span>4.<span style="font-weight:normal;font-size:7pt;font-family:'Times New Roman'">&nbsp;&nbsp;</span></span><span>Hiphop mssql install way</span><span style="font-family:宋体">：</span></h1><p><span>edit $HPHP_HOME/CMake/HPHPFind.cmake</span></p>
 <p><span>add content:</span></p>
 <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include_directories(/export/dev_hhvm/usr/include/freetds)</span></p>
 <p style="text-indent:21.0pt"><span>target_link_libraries(${target}/export/dev_hhvm/usr/lib/freetds/libsybdb.so)</span></p>
