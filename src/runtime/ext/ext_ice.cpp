@@ -70,7 +70,8 @@ Object c_ICE::t_stringtoproxy(CStrRef str){
 					op = communicatorPtr->stringToProxy(stringProxy);
 					//cout<<"create proxy"<<endl;
 				}catch (const Ice::Exception& ex){
-						cerr<<"function stringToProxy error:"<<ex<<endl;	
+						//cerr<<"function stringToProxy error:"<<ex<<endl;
+						raise_error("function stringToProxy error:%s:",ex.what());
 				}
 				ic->proxyObjectMap[stringProxy]=op;
 				g_persistentObjects->set(Communicator_persistentObject_name,tidc, ic);
@@ -125,7 +126,8 @@ Object f_ice_initialize() {
 
 		}
 		}catch (const Ice::Exception& ex){
-			cerr<<"function initialize error:"<<ex<<endl;
+			//cerr<<"function initialize error:"<<ex<<endl;
+			raise_error("function initialize error:%s:",ex.what());
 		}
 		ice->communicatorPtr=ic->cp;
 		ice->p_factoryWrapper=ic->p_iceObjectFactoryWrapperPtr;
@@ -266,7 +268,8 @@ Variant c_Proxy::t___call(Variant name,Variant arg){
 		 rcs = NULL;
   }catch(const Ice::Exception& ex)
   {
-		  cerr<<"proxy call error:"<<ex<<endl;
+		  //cerr<<"proxy call error:"<<ex<<endl;
+		  raise_error("proxy call error:%s:",ex.what());
   }
 
     return result;
@@ -287,7 +290,8 @@ Object c_Proxy::t_ice_datagram(){
   		try{
 		objectPrx=objectPrx->ice_datagram();
 		}catch(const Ice::Exception& ex){
-			cerr<<"function ice datagram error:"<<ex<<endl;
+			//cerr<<"function ice datagram error:"<<ex<<endl;
+			raise_error("function ice datagram error:%s:",ex.what());
 		}
 		return this;
 }
@@ -299,7 +303,8 @@ Object c_Proxy::t_ice_istwoway(){
   		try{
 			b=objectPrx->ice_isTwoway();
 		}catch(const Ice::Exception& ex){
-			cerr<<"ice_istwoway error:"<<ex<<endl;
+			//cerr<<"ice_istwoway error:"<<ex<<endl;
+			raise_error("ice_istwoway error:%s:",ex.what());
 		}
 		return this;
 }
@@ -318,7 +323,8 @@ Object c_Proxy::t_ice_timeout(int64 lasttime){
 	     try{
 			objectPrx=objectPrx->ice_timeout((int)lasttime);
 		}catch(const Ice::Exception& ex){
-			cerr<<"ice_timeout error:"<<ex<<endl;
+			//cerr<<"ice_timeout error:"<<ex<<endl;
+			raise_error("ice_timeout error:%s:",ex.what());
 		}
 
 		return this;
@@ -337,7 +343,8 @@ Object c_Proxy::t_ice_context(CArrRef ctx){
 		try{
 		objectPrx=objectPrx->ice_context(ice_ctx);
 		}catch(const Ice::Exception& ex){
-			cerr<<"ice context error:"<<ex<<endl;
+			//cerr<<"ice context error:"<<ex<<endl;
+			raise_error("ice context error:%s:",ex.what());
 		}
 		return this;
 }
