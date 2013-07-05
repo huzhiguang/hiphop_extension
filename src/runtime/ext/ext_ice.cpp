@@ -574,7 +574,6 @@ Object f_icephp_defineclass(CStrRef id, CStrRef name, bool isabstract /* = true 
 //
 void f_icephp_defineoperation(CObjRef classobj /* = null */, CStrRef funname /* = null */, int mode /* = null */, int sendmode /* = null */, CVarRef inparams /* = null */, CVarRef outparams /* = null */, CVarRef returntype /* = null */, CVarRef exceptions /* = null */) {
 		//printf("defineoperation is call \n");
-		IcePHP_Class_method *icm = new IcePHP_Class_method();
 		///////hzg edit////////////////////////////////////////////////////////////
 		Ice_ClassInfoPtr cic=classobj.getTyped<Ice_ClassInfo>();
 		/////////////////////////////////////////////////////////////////////
